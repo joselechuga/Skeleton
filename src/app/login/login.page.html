@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Inicio de sesion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body">
+
+
+  <ion-card>
+
+    <ion-card-item class="icono">
+      <div class="loader">
+        <span class="titulologin">JOJO</span>
+    </div>
+    </ion-card-item>
+
+
+    <ion-card-content>
+
+      <form [formGroup]="formularioLogin">
+        <ion-item lines="full">
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input type="text" [(ngModel)]="user.usuario" formControlName="nombre"></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" [(ngModel)]="user.password" formControlName="password"></ion-input>
+        </ion-item>
+      </form>
+      <br>
+      <ion-card-item class="botoneslogin">
+        <ion-button (click)="ingresar()">Ingresar</ion-button>
+      </ion-card-item>
+
+      <ion-card-item class="botonregiinvit">
+        <small>¿No tienes cuenta?</small>
+    
+        <ion-button [routerLink]="['/registro']">Registrate</ion-button>
+   
+        <small>Seguir como invitado</small>
+        <ion-button [routerLink]="['/producto']">Invitado</ion-button>
+      </ion-card-item>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

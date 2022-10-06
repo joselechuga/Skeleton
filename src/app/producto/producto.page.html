@@ -1,0 +1,33 @@
+<!-- <div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+    <img src="assets/icon/favicon.png" alt="">
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div>
+-->
+
+<ion-header>
+  <ion-toolbar color="estilopropio">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>     
+    <ion-title>
+      Tienda JOJO
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+
+  <ion-row>
+    <ion-col sizeLg="6" sizeMd="6" sizeXs="12" *ngFor=" let productos of producto">
+      <ion-card>
+        <img src="../../assets/producto-imagen/{{productos.imagen}}">
+        <div class="card-title">{{productos.name}}</div>
+      </ion-card>
+
+    </ion-col>
+  </ion-row>
+
+</ion-content>

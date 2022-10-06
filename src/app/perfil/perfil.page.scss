@@ -1,0 +1,42 @@
+.a{
+    color: blue;
+    background-color: aqua;
+}
+
+ion-card{
+  background-color: #2b7686;
+}
+
+.botonmostrarnombre{
+  color: black;
+}
+
+.botones{
+  display: flex;
+  flex-direction: column;
+}
+
+button{
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  border: 1px solid black;
+  padding: 10px;
+  margin: 3px;
+  border-radius: 15px;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    opacity: 0.5;
+    background: blue;
+    margin: 10px;
+    
+    --background: red;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .square {
+      --background: rgb(134, 23, 10);
+    }
+  }
+  

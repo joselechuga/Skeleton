@@ -1,0 +1,63 @@
+<!-- Se mueve todo de la actividad anterior a MisDatos -->
+<!-- Comienza el Header -->
+<ion-header [translucent]="false">
+  <ion-toolbar>
+    <ion-title>
+      JOJO
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-segment value="tiendas" (ionChange)="segmentChanged($event)">
+  
+      <ion-segment-button value="tiendas">
+        <ion-icon name="briefcase-outline"></ion-icon>
+      </ion-segment-button>
+      
+      <ion-segment-button value="catalogo">
+        <ion-icon name="albums-outline"></ion-icon>
+      </ion-segment-button>
+
+      <ion-segment-button value="salir">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <!-- Aquí se desplegara todos los Component que se declararon como children en
+  HomePageModule -->
+  <ion-router-outlet></ion-router-outlet>
+</ion-content>
+
+
+<!-- 
+  <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title id="titulo">
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-card>
+    <ion-card-content>
+      <ion-item lines="none">
+        <ion-label >Usuario : {{data.usuario}}</ion-label>
+      </ion-item>
+      <ion-button (click)="salir()">Cerrar sesion</ion-button>
+      <ion-button (click)="color()">color</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button (click)="irtienda()"> Vamos a la tienda </ion-button>
+</ion-content>
+-->

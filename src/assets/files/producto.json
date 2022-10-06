@@ -1,0 +1,16 @@
+{
+    "data":[
+        {
+            "name":"Teclado Logitech",
+            "imagen":"logitec.jpg"
+        },
+        {
+            "name":"Suplemento Gold",
+            "imagen":"golstand.jpg"
+        },
+        {
+            "name":"Pack Beyblade",
+            "imagen":"logitec.jpg"
+        }
+    ]
+}
