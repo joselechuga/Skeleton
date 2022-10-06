@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { map } from "rxjs/operators";
 import { HttpClientModule } from '@angular/common/http';
-import { GetApiService } from '../catalogo/get-api.service';
+import { Geolocation, Geoposition } from '@awesome-cordova-plugins/geolocation/ngx';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -11,40 +11,26 @@ import { GetApiService } from '../catalogo/get-api.service';
 })
 export class HomePage {
 
-  producto:Array <any>;
-  getdata: any[] = [];
+  ubicacion;
 
-  constructor(private http: HttpClient, private router: Router,
-    public _services:GetApiService) {
-    this.router.navigate(['home/tiendas']);
+  constructor(private http: HttpClient,
+    private router: Router,
+    public geolocation: Geolocation) {
 
-    this.producto = [
-      {"name":"Teclado Logitech",
-        "imagen":"logitec.jpg"},
-        {
-            "name":"Suplemento Gold",
-            "imagen":"golstand.jpg"
-        },
-        {
-            "name":"Pack Beyblade",
-            "imagen":"logitec.jpg"
-        }
-    ]
+    this.router.navigate(['home']);
   }
-  segmentChanged($event) {
-    console.log($event.detail.value);
-    let direction = $event.detail.value
-    if (direction == 'salir') {
-      localStorage.removeItem('ingresado');
-      this.router.navigate(['login'])
-    }
-    else {
-      this.router.navigate(['home/' + direction])
-    }
+
+
+  geolocationNative() {
+    this.geolocation.getCurrentPosition().then((geposition: Geoposition)=>{
+      console.log(geposition);
+      this.ubicacion = geposition;
+      console.log('ubicacion',this.ubicacion)
+    })
   }
 
   ngOnInit() {
-
+    this.geolocationNative();
   }
 
 }

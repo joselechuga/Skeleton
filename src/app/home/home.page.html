@@ -2,33 +2,41 @@
 <!-- Comienza el Header -->
 <ion-header [translucent]="false">
   <ion-toolbar>
-    <ion-title>
-      JOJO
+    <ion-title >
+      Skeleton
     </ion-title>
   </ion-toolbar>
-  <ion-toolbar>
-    <ion-segment value="tiendas" (ionChange)="segmentChanged($event)">
   
-      <ion-segment-button value="tiendas">
-        <ion-icon name="briefcase-outline"></ion-icon>
-      </ion-segment-button>
-      
-      <ion-segment-button value="catalogo">
-        <ion-icon name="albums-outline"></ion-icon>
-      </ion-segment-button>
-
-      <ion-segment-button value="salir">
-        <ion-icon name="log-out-outline"></ion-icon>
-      </ion-segment-button>
-    </ion-segment>
-  </ion-toolbar>
 </ion-header>
 
 
-<ion-content>
+<ion-content class="body">
   <!-- Aquí se desplegara todos los Component que se declararon como children en
   HomePageModule -->
-  <ion-router-outlet></ion-router-outlet>
+  <div class="titulo">
+    <h1>Listado de opciones</h1>
+  </div>
+  <br>
+  <ion-card class="card">
+    <img src="../../assets/img/componentes.png" alt="">
+    <div class="boton">
+      <ion-button [routerLink]="['/lista-componentes']">Componentes</ion-button>
+    </div>  </ion-card>
+
+  <ion-card class="card">
+    <img src="../../assets/img/rym1.jpg" alt="">
+    <div class="boton">
+      <ion-button [routerLink]="['/consumo-api']">Consumo de API</ion-button>
+    </div>
+  </ion-card>
+
+  <ion-card class="card">
+    <img src="../../assets/img/ubicacion.png" alt="">
+    <div class="boton">
+      <ion-button [routerLink]="['/ubicacion']">Ubicacion</ion-button>
+    </div>
+  </ion-card>
+
 </ion-content>
 
 

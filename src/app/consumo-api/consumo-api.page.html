@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="producto"></ion-back-button>
+    </ion-buttons>
+    <ion-title>rickymorty</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <ion-list *ngFor="let i of personajes">
+  <ion-item>
+    <ion-avatar slot="start" >
+      <img src="{{i.image}}" alt="">
+    </ion-avatar>
+    <ion-label>{{i.name}}</ion-label>
+  </ion-item>
+ </ion-list>
+</ion-content>

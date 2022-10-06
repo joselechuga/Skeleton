@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>lista-componentes</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-segment value="inicio" (ionChange)="segmentChanged($event)">
+      
+      <ion-segment-button value="inicio">
+        <ion-icon name="home-sharp"></ion-icon>
+      </ion-segment-button>
+
+      <ion-segment-button value="salir">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-segment-button>
+      
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-router-outlet></ion-router-outlet>
+</ion-content>

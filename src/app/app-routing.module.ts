@@ -32,11 +32,20 @@ const routes: Routes = [
   {
     path: 'perfil',
     loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },  {
+    path: 'consumo-api',
+    loadChildren: () => import('./consumo-api/consumo-api.module').then( m => m.ConsumoApiPageModule)
   },
   {
-    path: 'datos',
-    loadChildren: () => import('./datos/datos.module').then( m => m.DatosPageModule)
+    path: 'lista-componentes',
+    loadChildren: () => import('./lista-componentes/lista-componentes.module').then( m => m.ListaComponentesPageModule)
   },
+  {
+    path: 'ubicacion',
+    loadChildren: () => import('./ubicacion/ubicacion.module').then( m => m.UbicacionPageModule)
+  },
+
+
 
 ];
 
