@@ -11,8 +11,13 @@
 
 
 <ion-content class="body">
-  <!-- Aquí se desplegara todos los Component que se declararon como children en
-  HomePageModule -->
+
+  <ion-card>
+    <ion-button (click)="salir()">
+      SALIR
+    </ion-button>
+  </ion-card>
+
   <div class="titulo">
     <h1>Listado de opciones</h1>
   </div>
@@ -36,6 +41,8 @@
       <ion-button [routerLink]="['/ubicacion']">Ubicacion</ion-button>
     </div>
   </ion-card>
+
+
 
 </ion-content>
 

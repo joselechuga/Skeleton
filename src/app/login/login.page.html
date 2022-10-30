@@ -1,23 +1,43 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>Inicio de sesion</ion-title>
+  <ion-toolbar class="head">
+    <ion-title>JOJO APP</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="body">
 
+  <div class="seccionchilds">
+    <div>
+      <img src="../../assets/fondos/JoJosbizarre.png" alt="">
+    </div>
+    <ion-router-outlet></ion-router-outlet>
+  </div>
+
 
   <ion-card>
+    <ion-toolbar>
+      <ion-segment value="inicio" (ionChange)="segmentChanged($event)">
 
-    <ion-card-item class="icono">
-      <div class="loader">
-        <span class="titulologin">JOJO</span>
-    </div>
-    </ion-card-item>
+        <ion-segment-button value="paginaintento">
+          <small>Login</small>  
+          <ion-icon name="log-in-sharp"></ion-icon>
+        </ion-segment-button>
+
+        <ion-segment-button value="registro">
+          <small>Registro</small>
+          <ion-icon name="accessibility-sharp"></ion-icon>
+        </ion-segment-button>
+        
+      </ion-segment>
+    </ion-toolbar>
+  </ion-card>
+
+</ion-content>
 
 
+<!--
+  <ion-card>
     <ion-card-content>
-
       <form [formGroup]="formularioLogin">
         <ion-item lines="full">
           <ion-label position="floating">Usuario</ion-label>
@@ -43,5 +63,17 @@
       </ion-card-item>
     </ion-card-content>
   </ion-card>
+-->
 
-</ion-content>
+<!--  <ion-card class="botonescarta">
+
+    <div class="botones1">
+      <button class="inicio1">Ingresar</button>
+      <button class="inicio2">Registro</button>
+    </div>
+
+    <div class="botones2">
+      <button class="invitadoboton">Invitado</button>
+    </div>
+  </ion-card>
+-->

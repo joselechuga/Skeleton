@@ -1,0 +1,29 @@
+<ion-content>
+  <div>
+    <img src="../../assets/fondos/diologin.jpg" alt="">
+  </div>
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="titulo">Inicio de sesion</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="formularioLogin">
+        <ion-item lines="full">
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input type="text" [(ngModel)]="user.usuario" formControlName="nombre"></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" [(ngModel)]="user.password" formControlName="password"></ion-input>
+        </ion-item>
+      </form>
+      <br>
+      <ion-item class="botoneslogin">
+        <ion-button (click)="ingresar()">Ingresar</ion-button>
+      </ion-item>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

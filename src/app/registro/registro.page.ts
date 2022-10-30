@@ -59,9 +59,10 @@ export class RegistroPage implements OnInit {
       await alert.present();
       return;
     }else{
-      this.navCtrl.navigateRoot('login');
+      console.log('REGISTRADO');
+      localStorage.setItem('usuario',JSON.stringify(usuario));
     }
-
+    
     localStorage.setItem('usuario',JSON.stringify(usuario));//SE GUARDA DE FORMA LOCAL
   }
 

@@ -25,6 +25,8 @@ export class LoginPage implements OnInit {
       'nombre': new FormControl("",Validators.required),
       'password': new FormControl("",Validators.required)
     })
+
+    this.router.navigate(['login']);
   } 
 
   ngOnInit() {
@@ -56,6 +58,12 @@ export class LoginPage implements OnInit {
       
     }
 
+    }
+
+    segmentChanged($event) {
+      console.log($event.detail.value);
+      let direction = $event.detail.value
+      this.router.navigate(['login/' + direction])
     }
 
 }

@@ -1,6 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+.head{
+  --ion-background-color: #92c6b9;
+}
+
 .body{
-    background-color: red;
+    --ion-background-color: #92c6b9;
+}
+
+.seccionchilds{
+  height: 70vh;
 }
 
 .icono{
@@ -30,7 +39,7 @@ small{
 }
 
 ion-card-title,ion-title{
-    font-family: 'DynaPuff', cursive;
+    font-family: 'Righteous', cursive;
     -webkit-text-stroke: 0.5px rgba(0, 140, 255, 0.962);   
     font-size: 30px; 
 }
@@ -44,60 +53,51 @@ ion-item{
 }
 
 ion-card{
-    background-color: #2b7686;
+    background-color: #f5f7f7;
+    border-radius: 25px;
 }
 
+.botonescarta{
+  display: flex;
+  flex-direction: column;
+  height: 15vh;
+  width: 100vw;
+  right: 10px;
+}
 
-.loader {
-    width: 100px;
-    height: 100px;
-    box-sizing: border-box;
-    border-radius: 50%;
-    border-top: 5px solid #e74c3c;
-    position: relative;
-    animation: load 2s linear infinite;
-  }
-  
-  .loader::before,.loader::after {
-    content: '';
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    box-sizing: border-box;
-    border-radius: 50%;
-  }
-  
-  .loader::before {
-    border-top: 5px solid #e67e22;
-    transform: rotate(120deg);
-  }
-  
-  .loader::after {
-    border-top: 5px solid #3498db;
-    transform: rotate(240deg);
-  }
-  
-  .loader span {
-    position: absolute;
-    font-size: small;
-    width: 100px;
-    height: 100px;
-    color: #fff;
-    text-align: center;
-    line-height: 100px;
-    animation: a2 2s linear infinite;
-  }
-  
-  @keyframes load {
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
-  @keyframes a2 {
-    to {
-      transform: rotate(-360deg);
-    }
-  }
+.botones1{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.botones2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button{
+  border: 1px solid rgb(95, 95, 95);
+  height: 8vh;
+  width: 28vw;
+  background-color: #374649;
+  color: #f5f7f7;
+  font-family: 'Righteous', cursive;
+  font-size: 20px;
+}
+
+.inicio1{
+  width: 50vw;
+  border-radius: 20px 0 0 0;
+}
+
+.inicio2{
+  width: 50vw;
+  border-radius: 0 20px 0 0;
+}
+
+.invitadoboton{
+  width: 100vw;
+}
+

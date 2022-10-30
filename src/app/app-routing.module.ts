@@ -44,6 +44,14 @@ const routes: Routes = [
     path: 'ubicacion',
     loadChildren: () => import('./ubicacion/ubicacion.module').then( m => m.UbicacionPageModule)
   },
+  {
+    path: 'paginaintento',
+    loadChildren: () => import('./paginaintento/paginaintento.module').then( m => m.PaginaintentoPageModule)
+  },
+  {
+    path: 'login2',
+    loadChildren: () => import('./login2/login2.module').then( m => m.Login2PageModule)
+  },
 
 
 

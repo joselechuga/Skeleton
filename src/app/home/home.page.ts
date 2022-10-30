@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { map } from "rxjs/operators";
 import { HttpClientModule } from '@angular/common/http';
 import { Geolocation, Geoposition } from '@awesome-cordova-plugins/geolocation/ngx';
+import { NavController } from '@ionic/angular';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -15,7 +16,8 @@ export class HomePage {
 
   constructor(private http: HttpClient,
     private router: Router,
-    public geolocation: Geolocation) {
+    public geolocation: Geolocation,
+    public navCtrl:NavController) {
 
     this.router.navigate(['home']);
   }
@@ -33,6 +35,11 @@ export class HomePage {
     this.geolocationNative();
   }
 
+
+  salir(){
+    localStorage.removeItem('ingresado');
+    this.navCtrl.navigateRoot('/login'); 
+  }
 }
 
 

@@ -1,0 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+.titulo{
+    font-family: 'DynaPuff', cursive;
+    -webkit-text-stroke: 0.5px rgba(0, 140, 255, 0.962);   
+    font-size: 30px; 
+}
+
+ion-card{
+    background-color: rgb(231, 228, 228);
+    border-radius: 30px;
+}
+
+ion-item{
+    border-radius: 5px;
+    --ion-background-color: rgb(231, 225, 225);
+}
